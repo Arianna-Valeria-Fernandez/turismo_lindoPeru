@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kaymi allpay kaytaq perúy</title>
+    <meta name="description" content="Films of Studio Ghibli"/>
+    <meta name="keywords" content="ghibli, totoro"/>
+    <meta name="author" content="co-authored by Anghel Trillo, Itzel Gonzalez"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="./assets/icono2.jpg">
+    <link rel="stylesheet" href="style3.css" />
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/971ef92afb.js" crossorigin="anonymous"></script>
+    <!-- Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img class="nav__logo" src="assets/logo_peru-Photoroom.png" alt="LOGO DE INFOALCHEMY">
+        <h1 class="region">Región Selva</h1>
+        <i id="menuBurguer" class="fas fa-bars"></i>
+        <ul class="menu__dropdown disable">
+          <li class="menu__list">
+            <a href="#home" class="menu__item">Departamentos</a>
+          </li>
+         
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container" id="home">
+        <section class="menuBar">
+            <section class="search">
+              <input id="searchFilm" type="text" class="menuBar__search" placeholder="Buscar departamento...">
+            </section>
+            <section class="filter">
+              <select id="filterByDirectorProducer" class="filter__comboBox">
+                <option value="all" disabled selected>Provincias</option>
+                <option value="all">Todo</option>
+              </select>
+            </section>
+            <section class="filter">
+              <select id="sortBy" class="filter__comboBox">
+                <option value="title" disabled selected>Ecorregiones</option>
+                <option value="title">Selva Alta</option>
+                <option value="rt_score">Selva Baja</option>
+                <option value="rt_score">Selva Tropical</option>
+              </select>
+              <i id="orderData" class="fas fa-sort-amount-down-alt"></i>
+            </section>
+            <section id="filmsCounter" class="menuBar__showing">Mostrando</section> 
+            
+        </section>
+        <section class="container__films">
+       
+        </section>
+        
+        
+      </section>
+      <section class="container disable" id="film">
+        <section class="container__generalInformation">
+          <section class="container__returnBack">
+            <i class="fas fa-reply"></i>
+            <p class="paragraph">Anterior</p>
+          </section>
+          <section class="film__information">
+          </section>
+        </section>
+        <section class="section container__people"></section>
+        <section class="section container__locations"></section>
+        <section class="section container__vehicle"></section>
+      </section>
+      <section class="container disable" id="statistics">
+        <section class="section">
+          <h1 class="mainTitle"></h1>
+          <section class="container__films" id="containerStatistics"></section>
+        </section>
+        <section class="section">
+          <section class="sectionCharts">
+            <h1 class="mainTitle"></h1>
+            <section class="sectionChart">
+              <h2 class="subtitle"></h2>
+              <section class="containerChart">
+                <canvas class="canvasChart" id="gender"></canvas>
+              </section>
+            </section>
+            <section class="sectionChart">
+              <h2 class="subtitle">Specie</h2>
+              <section class="containerChart">
+                <canvas class="canvasChart" id="specie"></canvas>
+              </section>
+            </section>
+          </section>
+          <section class="sectionCharts">
+            <h1 class="mainTitle"></h1>
+            <section class="sectionChart">
+              <h2 class="subtitle"></h2>
+              <section class="containerChart">
+                <canvas class="canvasChart" id="climate"></canvas>
+              </section>
+            </section>
+            <section class="sectionChart">
+              <h2 class="subtitle"></h2>
+              <section class="containerChart">
+                <canvas class="canvasChart" id="terrain"></canvas>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="modalContainer containerClose">
+        <section class="modal modalClose">
+          <p id="close"><i class="fas fa-times"></i></p>
+          <section class="modalContent">
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <section>
+        &copy; InfoAlchemy
+      </section>
+   
+    </footer>
+    <!-- Templates -->
+    <template id="card">
+      <img class="card__image" loading="lazy">
+      <figcaption class="card__title"></figcaption>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+    <script src="pagina3.js" type="module"></script>
+  </body>
+</html>
